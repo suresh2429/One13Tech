@@ -1,0 +1,183 @@
+
+media:
+  input: public/images/uploads
+  output: /images/uploads
+
+content:
+  # General website pages
+  - name: pages
+    label: Website Pages
+    type: collection
+    path: src/content/pages
+    format: yaml-frontmatter
+    fields: &commonFields
+      - name: title
+        label: Page Title
+        type: string
+        required: true
+
+      - name: description
+        label: Short Description
+        type: text
+
+      - name: image
+        label: Featured Image
+        type: image
+
+      - name: draft
+        label: Draft
+        type: boolean
+
+      - name: metaTitle
+        label: SEO Title
+        type: string
+
+      - name: metaDescription
+        label: SEO Description
+        type: text
+
+      - name: canonical
+        label: Canonical URL
+        type: string
+
+      - name: body
+        label: Page Content
+        type: rich-text
+
+  # DBA services
+  - name: services
+    label: DBA Services
+    type: collection
+    path: src/content/services
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Service Name
+        type: string
+        required: true
+
+      - name: description
+        label: Service Description
+        type: text
+
+      - name: icon
+        label: Service Icon
+        type: string
+
+      - name: image
+        label: Service Image
+        type: image
+
+      - name: draft
+        label: Draft
+        type: boolean
+
+      - name: metaTitle
+        label: SEO Title
+        type: string
+
+      - name: metaDescription
+        label: SEO Description
+        type: text
+
+      - name: body
+        label: Service Details
+        type: rich-text
+
+  # Homepage content
+  - name: homepage
+    label: Homepage Content
+    type: collection
+    path: src/content/homepage
+    format: yaml-frontmatter
+    fields: *commonFields
+
+  # Blog articles
+  - name: blog
+    label: Blog Articles
+    type: collection
+    path: src/content/blog
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Article Title
+        type: string
+        required: true
+
+      - name: author
+        label: Author
+        type: string
+
+      - name: date
+        label: Published Date
+        type: date
+
+      - name: description
+        label: Article Description
+        type: text
+
+      - name: image
+        label: Featured Image
+        type: image
+
+      - name: categories
+        label: Categories
+        type: string
+        list: true
+
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+
+      - name: draft
+        label: Draft
+        type: boolean
+
+      - name: metaTitle
+        label: SEO Title
+        type: string
+
+      - name: metaDescription
+        label: SEO Description
+        type: text
+
+      - name: body
+        label: Article Content
+        type: rich-text
+
+  # Team members
+  - name: team
+    label: Team Members
+    type: collection
+    path: src/content/team
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Name
+        type: string
+        required: true
+
+      - name: profession
+        label: Designation
+        type: string
+
+      - name: description
+        label: Description
+        type: text
+
+      - name: image
+        label: Profile Image
+        type: image
+
+      - name: email
+        label: Email
+        type: string
+
+      - name: phone
+        label: Phone
+        type: string
+
+      - name: body
+        label: Profile Content
+        type: rich-text
