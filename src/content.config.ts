@@ -51,10 +51,12 @@ const pagesCollection = defineCollection({
 });
 
 // Service collection schema
+// Service collection schema
 const serviceCollection = defineCollection({
   loader: contentLoader(`./src/content/${servicesFolder}`),
   schema: page.extend({
     icon: z.string().optional(),
+    weight: z.number().optional(),
     servicesSection: sectionsSchema.servicesSection.optional(),
   }),
 });
