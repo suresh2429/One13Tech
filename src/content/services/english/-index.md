@@ -1,25 +1,24 @@
+
 ---
-title: "Our Services"
-metaDescription: "Browse our IT services, including app development, cybersecurity, cloud, automation, and support."
+title: "Database & IT Services"
+metaDescription: "Explore One13Tech services including database administration, migration, performance optimization, security, high availability, cloud infrastructure consulting, database training, recruitment, and managed IT support."
 draft: false
 
-# Override Default Content of `/sections/services-section.md` showing in services list page
-# Uncomment key values that you want to override
 servicesSection:
   enable: true
-  title: ""
+  title: "Our Database & IT Services"
 
   options:
-    layout: "grid" # accordion / grid / grid-2-col
-    limit: false # false / number
-    column: 3 # 2 / 3
-    iconPlacement: "top" # top / right
-    marquee: # Used when layout is "carousel"
+    layout: "grid"
+    limit: false
+    column: 3
+    iconPlacement: "top"
+    marquee:
       elementWidthAuto: false
       elementWidth: "22rem"
       elementWidthResponsive: "18rem"
       pauseOnHover: true
-      reverse: "" # reverse / ""
+      reverse: ""
       duration: "6s"
       fullWidth: true
       maxWidth: "1920px"
