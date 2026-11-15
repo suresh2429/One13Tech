@@ -1,402 +1,104 @@
-
-media:
-  input: public/images/uploads
-  output: /images/uploads
-  extensions:
-    - jpg
-    - jpeg
-    - png
-    - webp
-    - svg
-  rename: safe
-
-components:
-  seo:
-    type: object
-    label: SEO Settings
-    fields:
-      - name: metaTitle
-        label: SEO Title
-        type: string
-      - name: metaDescription
-        label: SEO Description
-        type: text
-      - name: canonical
-        label: Canonical URL
-        type: string
-      - name: robots
-        label: Robots
-        type: string
-
-  button:
-    type: object
-    label: Button
-    fields:
-      - name: enable
-        type: boolean
-      - name: label
-        type: string
-      - name: url
-        type: string
-      - name: tag
-        type: select
-        options:
-          values: [a, button]
-      - name: variant
-        type: select
-        options:
-          values: [fill, fill-white, outline, text, circle]
-      - name: hoverEffect
-        type: select
-        options:
-          values:
-            - text-flip
-            - creative-fill
-            - magnetic
-            - magnetic-text-flip
-      - name: target
-        type: string
-      - name: rel
-        type: string
-      - name: class
-        type: string
-      - name: icon
-        type: object
-        fields:
-          - name: enable
-            type: boolean
-          - name: name
-            type: string
-          - name: position
-            type: select
-            options:
-              values: [left, right]
-
-content:
-  - name: homepage
-    label: Homepage
-    type: group
-    items:
-      - name: home-en
-        label: English Homepage
-        type: file
-        path: src/content/homepage/english/-index.md
-        format: yaml-frontmatter
-        fields:
-          - name: title
-            label: Page Title
-            type: string
-          - name: metaDescription
-            label: SEO Description
-            type: text
-          - name: hasFooterDarkBackground
-            label: Dark Footer Background
-            type: boolean
-        operations:
-          delete: false
-
-      - name: home-fr
-        label: French Homepage
-        type: file
-        path: src/content/homepage/french/-index.md
-        format: yaml-frontmatter
-        fields:
-          - name: title
-            label: Page Title
-            type: string
-          - name: metaDescription
-            label: SEO Description
-            type: text
-          - name: hasFooterDarkBackground
-            label: Dark Footer Background
-            type: boolean
-        operations:
-          delete: false
-
-  - name: homepage-sections
-    label: Homepage Sections
-    type: group
-    items:
-      - name: english-sections
-        label: English Sections
-        type: group
-        items:
-          - name: en-banner
-            label: Hero Banner
-            type: file
-            path: src/content/sections/english/banner-three.md
-            format: yaml-frontmatter
-            fields:
-              - name: enable
-                type: boolean
-              - name: subtitle
-                type: string
-              - name: title
-                type: text
-              - name: description
-                type: text
-              - name: mapImage
-                label: Map Image
-                type: image
-              - name: gradientBackgroundImage
-                label: Background Image
-                type: image
-              - name: buttons
-                type: object
-                list:
-                  collapsible:
-                    collapsed: true
-                    summary: "{label}"
-                fields:
-                  - name: enable
-                    type: boolean
-                  - name: label
-                    type: string
-                  - name: url
-                    type: string
-                  - name: hoverEffect
-                    type: string
-                  - name: variant
-                    type: string
-
-          - name: en-about
-            label: About Section
-            type: file
-            path: src/content/sections/english/about-section.md
-            format: yaml-frontmatter
-            fields:
-              - name: enable
-                type: boolean
-              - name: imagePosition
-                type: select
-                options:
-                  values: [left, right]
-              - name: images
-                type: object
-                fields:
-                  - name: large
-                    label: Large Image
-                    type: image
-                  - name: small
-                    label: Small Image
-                    type: image
-              - name: title
-                type: text
-              - name: subtitle
-                type: text
-              - name: description
-                type: text
-              - name: extraType
-                type: select
-                options:
-                  values: [skills, list-x, list-y, list-inline, stats, none]
-              - name: buttons
-                type: object
-                list: true
-                component: button
-              - name: skills
-                type: object
-                list: true
-                fields:
-                  - name: label
-                    type: string
-                  - name: value
-                    type: string
-              - name: listItems
-                type: object
-                list: true
-                fields:
-                  - name: title
-                    type: string
-                  - name: description
-                    type: text
-                  - name: icon
-                    type: string
-              - name: stats
-                type: object
-                list: true
-                fields:
-                  - name: value
-                    type: string
-                  - name: prependValue
-                    type: string
-                  - name: appendValue
-                    type: string
-                  - name: label
-                    type: string
-
-          - name: en-services-section
-            label: Services Section Settings
-            type: file
-            path: src/content/sections/english/services-section.md
-            format: yaml-frontmatter
-            fields:
-              - name: enable
-                type: boolean
-              - name: title
-                type: text
-              - name: button
-                component: button
-              - name: options
-                type: object
-                fields:
-                  - name: layout
-                    type: select
-                    options:
-                      values: [grid, carousel, accordion]
-                  - name: appearance
-                    type: string
-                  - name: iconPlacement
-                    type: select
-                    options:
-                      values: [top, right]
-                  - name: column
-                    type: number
-                  - name: sectionVerticalSpace
-                    type: boolean
-                  - name: marquee
-                    type: object
-                    fields:
-                      - name: elementWidth
-                        type: string
-                      - name: elementWidthAuto
-                        type: boolean
-                      - name: elementWidthResponsive
-                        type: string
-                      - name: pauseOnHover
-                        type: boolean
-                      - name: reverse
-                        type: string
-                      - name: duration
-                        type: string
-                      - name: fullWidth
-                        type: boolean
-
-      - name: french-sections
-        label: French Sections
-        type: group
-        items:
-          - name: fr-banner
-            label: Hero Banner
-            type: file
-            path: src/content/sections/french/banner-three.md
-            format: code
-            options:
-              language: yaml
-
-          - name: fr-about
-            label: About Section
-            type: file
-            path: src/content/sections/french/about-section.md
-            format: code
-            options:
-              language: yaml
-
-          - name: fr-services-section
-            label: Services Section Settings
-            type: file
-            path: src/content/sections/french/services-section.md
-            format: code
-            options:
-              language: yaml
-
-  - name: services
-    label: DBA Services
-    type: group
-    items:
-      - name: services-en
-        label: English Services
-        type: collection
-        path: src/content/services/english
-        format: yaml-frontmatter
-        filename: "{primary}.mdx"
-        view:
-          primary: title
-          fields: [title, description, draft]
-        fields:
-          - name: title
-            label: Service Name
-            type: string
-            required: true
-          - name: customSlug
-            label: Custom URL Slug
-            type: string
-          - name: description
-            label: Short Description
-            type: text
-          - name: date
-            label: Date
-            type: date
-          - name: icon
-            label: Icon or SVG Path
-            type: string
-          - name: image
-            label: Service Image
-            type: image
-          - name: draft
-            type: boolean
-          - name: metaTitle
-            label: SEO Title
-            type: string
-          - name: metaDescription
-            label: SEO Description
-            type: text
-          - name: body
-            label: Service Content (MDX)
-            type: code
-            options:
-              format: mdx
-        operations:
-          rename: false
-          delete: false
-
-      - name: services-fr
-        label: French Services
-        type: collection
-        path: src/content/services/french
-        format: yaml-frontmatter
-        filename: "{primary}.mdx"
-        view:
-          primary: title
-          fields: [title, description, draft]
-        fields:
-          - name: title
-            label: Service Name
-            type: string
-            required: true
-          - name: customSlug
-            label: Custom URL Slug
-            type: string
-          - name: description
-            label: Short Description
-            type: text
-          - name: date
-            type: date
-          - name: icon
-            type: string
-          - name: image
-            type: image
-          - name: draft
-            type: boolean
-          - name: metaTitle
-            type: string
-          - name: metaDescription
-            type: text
-          - name: body
-            label: Service Content (MDX)
-            type: code
-            options:
-              format: mdx
-        operations:
-          rename: false
-          delete: false
-
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+- name: services
+  label: DBA Services
+  type: group
+  items:
+  - name: services-en
+    label: English Services
+    type: collection
+    path: src/content/services/english
+    exclude:
+    - -index.md
+    format: yaml-frontmatter
+    filename: '{primary}.mdx'
+    view:
+      primary: title
+      fields:
+      - title
+      - description
+      - draft
+    fields: &id002
+    - name: title
+      label: Service Name
+      type: string
+      required: true
+    - name: customSlug
+      label: Custom URL Slug
+      type: string
+    - name: description
+      label: Short Description
+      type: text
+    - name: date
+      label: Date
+      type: date
+    - name: icon
+      label: Icon or SVG Path
+      type: string
+    - name: image
+      label: Service Image
+      type: image
+    - name: draft
+      type: boolean
+    - name: metaTitle
+      label: SEO Title
+      type: string
+    - name: metaDescription
+      label: SEO Description
+      type: text
+    - name: body
+      label: Service Content (MDX)
+      type: code
+      options:
+        format: mdx
+    operations:
+      rename: false
+      delete: false
+  - name: services-fr
+    label: French Services
+    type: collection
+    path: src/content/services/french
+    exclude:
+    - -index.md
+    format: yaml-frontmatter
+    filename: '{primary}.mdx'
+    view:
+      primary: title
+      fields:
+      - title
+      - description
+      - draft
+    fields: *id002
+    operations:
+      rename: false
+      delete: false
+  - name: services-index-en
+    label: English Services Page Settings
+    type: file
+    path: src/content/services/english/-index.md
+    format: code
+    options:
+      language: yaml
+    operations:
+      delete: false
+  - name: services-index-fr
+    label: French Services Page Settings
+    type: file
+    path: src/content/services/french/-index.md
+    format: code
+    options:
+      language: yaml
+    operations:
+      delete: false
 settings:
   content:
     merge: true
   commit:
     templates:
-      create: "content: create {path}"
-      update: "content: update {path}"
-      delete: "content: delete {path}"
-      rename: "content: rename {oldPath} to {newPath}"
+      create: 'content: create {path}'
+      update: 'content: update {path}'
+      delete: 'content: delete {path}'
+      rename: 'content: rename {oldPath} to {newPath}'
