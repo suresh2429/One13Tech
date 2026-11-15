@@ -114,13 +114,11 @@
 
   # Multilingual settings (check src/config/language.json for changing the languages)
   # NOTE: Manually restart your server when you change the following multilingual table values
-  [settings.multilingual]
-    # Set `enable` to `true` for enabling the multilingual feature or `false` for disabling it.
-    # Run `npm run remove-multilingual` for removing multilingual content files after disabling the feature.
-    enable               = true
-    defaultLanguage      = "en"
-    disableLanguages     = [""] # List of languages to disable (eg: ["fr", "es"])
-    showDefaultLangInUrl = false # Show default language in URL (eg: https://www.schemazendb.com/en/)
+   [settings.multilingual]
+   enable               = false
+   defaultLanguage      = "en"
+   disableLanguages     = ["fr"]
+   showDefaultLangInUrl = false
 
   # Global Contact Information
   [settings.contactInfo]

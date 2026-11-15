@@ -329,17 +329,7 @@ if (
 ) {
   updatedUrl = `${basePath}${updatedUrl.startsWith("/") ? "" : "/"}${updatedUrl}`;
 }
-  // Apply Astro's deployment base path (e.g. /One13Tech on GitHub Pages)
 
-
-if (
-  basePath &&
-  basePath !== "/" &&
-  updatedUrl !== basePath &&
-  !updatedUrl.startsWith(`${basePath}/`)
-) {
-  updatedUrl = `${basePath}${updatedUrl.startsWith("/") ? "" : "/"}${updatedUrl}`;
-}
 
   // Reconstruct the complete URL if the original URL is absolute, meaning it includes both a protocol and a hostname.
   if (isAbsoluteUrl) {
