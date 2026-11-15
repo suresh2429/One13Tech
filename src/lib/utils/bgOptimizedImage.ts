@@ -1,43 +1,61 @@
+
 import { getImage } from "astro:assets";
+import { existsSync } from "node:fs";
+import { resolve } from "node:path";
+
+const images = import.meta.glob(
+  "/src/assets/images/**/*.{jpeg,jpg,png,svg,gif}",
+);
 
 const bgOptimizedImage = async (
   src: string,
   format?: "auto" | "avif" | "jpeg" | "png" | "svg" | "webp",
 ) => {
-  src = `/src/assets${src}`;
-  const images = import.meta.glob(
-    "/src/assets/images/**/*.{jpeg,jpg,png,svg,gif}",
-  );
+  if (!src) return "";
 
-  // Check if the source path is valid
-  if (!src || !images[src]) {
-    console.error(
-      `\x1b[31mImage not found - ${src}.\x1b[0m Make sure the image is in the /src/assets/images folder.`,
-    );
-
-    return ""; // Return an empty string if the image is not found
+  // External images should be used directly.
+  if (/^https?:\/\//i.test(src)) {
+    return src;
   }
 
-  // Function to get the image info like width, height, format, etc.
-  const getImagePath = async (image: string) => {
+  const normalizedSrc = src.startsWith("/") ? src : `/${src}`;
+
+  // First, check whether the image is inside src/assets/images.
+  const assetPath = `/src/assets${normalizedSrc}`;
+  const imageLoader = images[assetPath];
+
+  if (imageLoader) {
     try {
-      const imageData = (await images[image]()) as any;
-      return imageData;
+      const imageModule = (await imageLoader()) as any;
+
+      const optimizedImage = await getImage({
+        src: imageModule.default,
+        format,
+      });
+
+      return optimizedImage.src;
     } catch (error) {
-      return `Image not found - ${src}. Make sure the image is in the /src/assets/images folder.`;
+      console.error(`Failed to optimize image: ${src}`, error);
+      return "";
     }
-  };
+  }
 
-  // Get the image data for the specified source path
-  const image = await getImagePath(src);
+  // Images inside public/ are served directly and should not use getImage().
+  const publicImagePath = resolve(
+    process.cwd(),
+    "public",
+    normalizedSrc.replace(/^\/+/, ""),
+  );
 
-  // Optimize the image for development
-  const OptimizedImage = await getImage({
-    src: image.default,
-    format: format,
-  });
+  if (existsSync(publicImagePath)) {
+    return normalizedSrc;
+  }
 
-  return OptimizedImage.src;
+  console.error(
+    `Image not found - ${src}. Checked src/assets/images and public.`,
+  );
+
+  return "";
 };
 
 export default bgOptimizedImage;

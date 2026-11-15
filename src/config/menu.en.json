@@ -5,6 +5,11 @@
                        "name":  "Home",
                        "url":  "/"
                    },
+ 		  {
+                      "enable": true,
+                      "name": "About Us",
+                      "url": "/about/"
+                  },
                    {
                        "enable":  true,
                        "name":  "Services",
@@ -68,11 +73,11 @@
                        "name":  "Blog",
                        "url":  "/blog/"
                    },
-       {
-           "enable": true,
-            "name": "Careers",
-                      "url": "/careers/"
-       }
+                  {
+                     "enable": true,
+                     "name": "Careers",
+                     "url": "/careers/"
+                  }
                ],
     "footer":  [
                    {
@@ -92,7 +97,7 @@
                                     {
                                         "enable":  true,
                                         "name":  "About Us",
-                                        "url":  "#"
+                                        "url":  "/about/"
                                     },
                                     {
                                         "enable":  true,
