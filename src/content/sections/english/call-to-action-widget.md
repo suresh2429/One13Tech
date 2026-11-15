@@ -1,23 +1,20 @@
+
 ---
-# Default content for `src/layouts/components/ServicesSingle.astro`.
-# The service sidebar list is generated from the services collection.
-# `contact` feeds `src/layouts/components/widgets/ServicesSingleCta.astro`.
 contact:
   icon: "Headset"
-  title: "Don't hesitate to contact us"
-  description: "At our IT solution company, we are committed to exceptional service and reliable support."
+  title: "Need Expert Database Support?"
+  description: "Connect with One13Tech for reliable database administration, migration, performance optimization and enterprise technology support."
   button:
-    # Refer to the `sharedButton` schema in `src/sections.schema.ts` for all available configuration options
     enable: true
-    label: "Get in Touch"
+    label: "Talk to Our Experts"
     url: "/#contact"
     hoverEffect: "magnetic-text-flip"
     variant: "fill"
-    rel: "" # Optional
-    target: "" # Optional
-    class: "rounded-md px-6 py-3.5 text-sm leading-6 font-semibold normal-case" # Optional
-    icon: # Optional
-      enable: false
+    rel: ""
+    target: ""
+    class: "rounded-md px-6 py-3.5 text-sm leading-6 font-semibold normal-case"
+    icon:
+      enable: true
       name: "ArrowUpRight"
       position: "right"
 ---
