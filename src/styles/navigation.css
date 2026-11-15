@@ -298,6 +298,7 @@ header {
 }
 
 /* Show main logo in footer */
+/* Footer logo and appearance */
 footer {
   .logo-text {
     @apply text-h4 text-dark;
@@ -310,8 +311,14 @@ footer {
   &.footer-dark {
     @apply bg-theme-dark text-light;
 
-    .logo-alternate {
+    /* Keep the configured main logo visible */
+    .logo {
       @apply inline-block!;
+    }
+
+    /* Use alternate logo only when configured */
+    .logo-alternate {
+      @apply hidden;
     }
 
     .logo-text,

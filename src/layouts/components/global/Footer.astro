@@ -9,7 +9,7 @@ import { useTranslations } from "@/lib/utils/i18nUtils.ts";
 import Logo from "@/components/global/Logo.astro";
 import { getFooterMenuGroups } from "@/lib/utils/menu";
 
-const { footerSpaceTop = false, hasFooterDarkBackground = false } = Astro.props;
+const { footerSpaceTop = false, hasFooterDarkBackground = true } = Astro.props;
 
 import config from ".astro/config.generated.json";
 const t = await useTranslations(Astro.currentLocale as string);

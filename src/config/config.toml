@@ -3,7 +3,7 @@
   title            = "One13Tech" # Shared title for SEO and OpenGraph
   description      = "One13Tech delivers database administration, migration, performance optimization, cloud infrastructure, security, training and staffing solutions for businesses." # Shared description for SEO and OpenGraph
   tagline          = "Connect. Secure. Scale."
-  taglineSeparator = "" # default is " - " 
+  taglineSeparator = "" # default is " - "
   baseUrl          = "https://www.schemazendb.com" # Base URL for the site and used in OpenGraph meta tags.
   logo             = "/images/one13tech-logo.png"
   logoAlternate    = ""
@@ -11,7 +11,7 @@
   logoWidth        = "240px"
   logoHeight       = "80px"
 
-  # Add a trailing slash at the end of URLs (e.g., https://example.com/, https://example.com/contact/)Ë
+  # Add a trailing slash at the end of URLs (e.g., https://example.com/, https://example.com/contact/)Ã‹Â
   # Note: Manually restart your server when you change this value
   trailingSlash = true
 
@@ -98,7 +98,7 @@
   # One13Tech website copyright information.
   [settings.copyright]
     enable = true
-    text   = "Copyright © 2026 One13Tech. All rights reserved."
+    text   = "Copyright Â© 2026 One13Tech. All rights reserved."
 
   # Mailchimp Subscription Form located in footer
   [settings.subscription]
@@ -138,13 +138,13 @@
     [settings.headerOffcanvas.button]
       enable = true
       label  = "" # Check src/i18n/en.json and src/i18n/fr.json for changing the button label in different languages or directly add value here if you are not using internationalization feature
-      url    = "/#contact"
+      url    = "/contact/"
 
 # Navigation Button In Header
 [settings.navigationButton]
   enable = true
   label  = "" # Check src/i18n/en.json and src/i18n/fr.json for changing the navigation button label in different languages or directly add value here if you are not using internationalization feature
-  url    = "/#contact"
+  url    = "/contact/"
 
 [settings.markup.tableOfContents]
   enable     = true
@@ -170,4 +170,3 @@
   content = """
   <script></script>
   """
-

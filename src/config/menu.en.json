@@ -1,4 +1,4 @@
-﻿{
+{
     "header":  [
                    {
                        "enable":  true,
@@ -68,27 +68,22 @@
                        "name":  "Blog",
                        "url":  "/blog/"
                    },
-                   {
-                       "enable":  true,
-                       "name":  "Team",
-                       "url":  "/team/"
-                   },
-		   {
- 		      "enable": true,
-  		      "name": "Careers",
+       {
+           "enable": true,
+            "name": "Careers",
                       "url": "/careers/"
-		   }
+       }
                ],
     "footer":  [
                    {
                        "label":  "Quick Links",
                        "list":  [
                                     {
-                                        "enable":  true,
-                                        "name":  "Our Team",
-                                        "url":  "/team/",
-                                        "active":  true
-                                    },
+            "enable": true,
+          "name": "Contact Us",
+            "url": "/contact/",
+            "active": true
+            },
                                     {
                                         "enable":  true,
                                         "name":  "Blogs",
@@ -103,11 +98,6 @@
                                         "enable":  true,
                                         "name":  "Careers",
                                         "url":  "/careers/"
-                                    },
-                                    {
-                                        "enable":  true,
-                                        "name":  "Contact",
-                                        "url":  "/#contact"
                                     }
                                 ]
                    },

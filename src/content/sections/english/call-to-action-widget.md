@@ -7,7 +7,7 @@ contact:
   button:
     enable: true
     label: "Talk to Our Experts"
-    url: "/#contact"
+    url: "/contact/"
     hoverEffect: "magnetic-text-flip"
     variant: "fill"
     rel: ""

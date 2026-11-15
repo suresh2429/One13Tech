@@ -10,7 +10,7 @@ description: |
 button:
   enable: true
   label: "Let's Talk About Your Project"
-  url: "/#contact"
+  url: "/contact/"
   hoverEffect: "magnetic-text-flip"
   variant: "fill"
   rel: ""
