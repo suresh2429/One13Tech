@@ -1,62 +1,40 @@
 ---
-enable: true # Boolean: true | false
-imagePosition: "left" # Enum: left | right
-
+enable: true
+imagePosition: left
 images:
-  large: "/images/about-us/about-1-a.jpg"
-  small: "/images/about-us/about-1-b.jpg"
+  large: /images/about-us/about-1-a.jpg
+  small: /images/about-us/about-1-b.jpg
+title: Your Trusted Partner in Database & Technology Solutions
+subtitle: Empowering Businesses Through Reliable, Secure and Scalable Technology
+description: >-
+  One13Tech is a technology services company focused on delivering reliable
+  database and IT infrastructure solutions for modern businesses.
 
-title: |
-  More than 25+ years we provide IT solutions
-subtitle: |
-  During this time, we have built a reputation for dependable delivery, practical guidance, and long-term client support.
-description: |
-  We help organizations modernize technology with clear planning, focused delivery, and maintainable systems.
 
-# EXTRATYPE OPTIONS: "skills" | "list-x" | "list-y" | "stats" | "none"
-extraType: "none"
+  We help organizations manage, modernize and optimize their technology
+  environments through expert database administration, migration, performance
+  tuning, security and managed services.
 
-# SHARED BUTTON CONFIGURATION (Applies to all section buttons)
+
+  With expertise across leading enterprise database platforms, we focus on
+  minimizing downtime, improving performance, strengthening security and
+  ensuring business continuity.
+
+
+  Our approach combines technical expertise, practical solutions and long-term
+  partnership to help businesses grow with confidence.
+extraType: none
 buttons:
-  - enable: true # Boolean: true | false
-    label: "Explore Our Services"
-    url: "/services/"
-    tag: "a" # Enum: a | button
-    variant: "fill" # Enum: fill | fill-white | outline | text | circle
-    hoverEffect: "magnetic-text-flip" # Enum: text-flip | creative-fill | magnetic | magnetic-text-flip
-    icon: # Object
+  - enable: true
+    label: Explore Our Services
+    url: /services/
+    tag: a
+    variant: fill
+    hoverEffect: magnetic-text-flip
+    target: _blank
+    rel: noopener
+    icon:
       enable: false
-      name: "ArrowUpRight" # String: Lucide Icon Name - https://lucide.de v/icons/?search=
-      position: "right" # Enum: left | right (Note: text variant is always right)
-    rel: "noopener"
-    target: "_blank" # String: _blank | _self
-    class: "" # String: Additional button Tailwind classes
-
-
-# extraType: "skills"
-# skills: # Array of objects
-#   - label: "IT Solution & Management"
-#     value: "86" # String: Percentage value (0-100)
-#   - label: "Website & App Development"
-#     value: "72"
-
-# extraType: "list-x"
-# listItems: # Array of objects
-#   - title: "Provide Skills Services"
-#     icon: "Settings" # String: Lucide Icon Name
-#   - title: "Urgent Support For Clients"
-#     icon: "Headphones"
-
-# extraType: "stats"
-# stats: # Array of objects
-#   - value: "1800" # String: Numeric value for animation
-#     prependValue: "$" # String: Symbol before number
-#     appendValue: "+" # String: Symbol after number
-#     label: "Happy Clients"
-
-# extraType: "list-y"
-# listItems: # Array of objects
-#   - title: "Quality Solution for Business"
-#     description: "Customize almost anything in the appearance."
-#     icon: "Trophy" # String: Lucide Icon Name
+      name: ArrowUpRight
+      position: right
 ---
