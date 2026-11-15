@@ -1,0 +1,316 @@
+---
+import Base from "@/layouts/Base.astro";
+import { generatePaths } from "@/lib/utils/i18nUtils.ts";
+import PageHeader from "@/components/widgets/PageHeader.astro";
+
+export function getStaticPaths() {
+  return generatePaths();
+}
+---
+
+<Base
+  title="About Us"
+  metaTitle="About One13Tech | Database, Cloud and IT Solutions"
+  metaDescription="Learn about One13Tech and our services in database administration, migration, performance optimization, cloud infrastructure, training and staffing."
+>
+  <PageHeader content={{ title: "About One13Tech" }} />
+
+  <!-- Introduction -->
+  <section class="section-spacing-lg-vertical">
+    <div class="container">
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
+          Who We Are
+        </p>
+
+        <h2 class="text-h2 mb-6">
+          Technology Solutions That Help Businesses Move Forward
+        </h2>
+
+        <p class="mx-auto max-w-3xl text-lg leading-8 opacity-80">
+          One13Tech delivers database, cloud, infrastructure, training and
+          staffing solutions to help businesses manage and evolve their
+          technology environments.
+        </p>
+
+        <p class="mx-auto mt-5 max-w-3xl leading-8 opacity-80">
+          We focus on practical technology solutions across database
+          administration, migration, performance, security, high availability
+          and IT services. Our objective is to help organizations build
+          dependable technology operations that support their business needs.
+        </p>
+
+        <p class="mt-8 text-xl font-bold text-primary">
+          Connect. Secure. Scale.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section-spacing-lg-vertical bg-theme-light">
+    <div class="container">
+      <div class="mb-12 text-center">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
+          What We Do
+        </p>
+        <h2 class="text-h2">Our Services</h2>
+        <p class="mx-auto mt-4 max-w-2xl leading-7 opacity-80">
+          We offer technology services across database platforms,
+          infrastructure and IT operations.
+        </p>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-2xl border bg-white p-7">
+          <h3 class="mb-3 text-xl font-bold">Database Administration &amp; Consulting</h3>
+          <p class="leading-7 opacity-80">
+            Database administration and consulting to support reliable,
+            secure and well-managed database environments.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border bg-white p-7">
+          <h3 class="mb-3 text-xl font-bold">Database Migration &amp; Modernization</h3>
+          <p class="leading-7 opacity-80">
+            Database migration and modernization services for organizations
+            evolving their data platforms.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border bg-white p-7">
+          <h3 class="mb-3 text-xl font-bold">Performance Optimization</h3>
+          <p class="leading-7 opacity-80">
+            Database performance analysis and optimization focused on
+            improving efficiency and application responsiveness.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border bg-white p-7">
+          <h3 class="mb-3 text-xl font-bold">Database Security &amp; Auditing</h3>
+          <p class="leading-7 opacity-80">
+            Database security and auditing services to help strengthen
+            access controls and protect critical data.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border bg-white p-7">
+          <h3 class="mb-3 text-xl font-bold">High Availability &amp; Disaster Recovery</h3>
+          <p class="leading-7 opacity-80">
+            High availability and disaster recovery planning to support
+            database continuity and recovery requirements.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border bg-white p-7">
+          <h3 class="mb-3 text-xl font-bold">Cloud &amp; Infrastructure Consulting</h3>
+          <p class="leading-7 opacity-80">
+            Infrastructure and cloud consulting to support the design
+            and management of technology environments.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border bg-white p-7">
+          <h3 class="mb-3 text-xl font-bold">Database Training</h3>
+          <p class="leading-7 opacity-80">
+            Database training and knowledge development to help teams
+            build practical technical skills.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border bg-white p-7">
+          <h3 class="mb-3 text-xl font-bold">IT &amp; Non-IT Staffing</h3>
+          <p class="leading-7 opacity-80">
+            Recruitment and contract staffing services to support
+            organizational workforce requirements.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border bg-white p-7">
+          <h3 class="mb-3 text-xl font-bold">Managed IT Support</h3>
+          <p class="leading-7 opacity-80">
+            Managed IT support and services to help businesses maintain
+            their technology operations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Expertise -->
+  <section class="section-spacing-lg-vertical">
+    <div class="container">
+      <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+        <div>
+          <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
+            Technology Expertise
+          </p>
+
+          <h2 class="text-h2 mb-6">
+            Database Technologies We Work With
+          </h2>
+
+          <p class="leading-8 opacity-80">
+            Our database services cover multiple enterprise and open-source
+            platforms. We work across database administration, migration,
+            maintenance, performance and operational requirements.
+          </p>
+
+          <p class="mt-4 leading-8 opacity-80">
+            Our technology focus includes relational, distributed and
+            analytical database platforms.
+          </p>
+        </div>
+
+        <div class="rounded-2xl bg-dark p-8 text-white md:p-10">
+          <div class="grid grid-cols-2 gap-5">
+            <div class="rounded-xl border border-white/15 p-4">
+              <p class="font-semibold">MongoDB</p>
+            </div>
+            <div class="rounded-xl border border-white/15 p-4">
+              <p class="font-semibold">PostgreSQL</p>
+            </div>
+            <div class="rounded-xl border border-white/15 p-4">
+              <p class="font-semibold">Sybase ASE</p>
+            </div>
+            <div class="rounded-xl border border-white/15 p-4">
+              <p class="font-semibold">IBM Db2</p>
+            </div>
+            <div class="rounded-xl border border-white/15 p-4">
+              <p class="font-semibold">SQL Server</p>
+            </div>
+            <div class="rounded-xl border border-white/15 p-4">
+              <p class="font-semibold">Greenplum</p>
+            </div>
+            <div class="rounded-xl border border-white/15 p-4">
+              <p class="font-semibold">Apache Cloudberry</p>
+            </div>
+            <div class="rounded-xl border border-white/15 p-4">
+              <p class="font-semibold">MySQL / MariaDB</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Approach -->
+  <section class="section-spacing-lg-vertical bg-theme-light">
+    <div class="container">
+      <div class="mb-12 text-center">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
+          How We Work
+        </p>
+        <h2 class="text-h2">Our Approach</h2>
+        <p class="mx-auto mt-4 max-w-2xl leading-7 opacity-80">
+          A structured approach helps align technology work with business
+          requirements and operational priorities.
+        </p>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-2xl border bg-white p-7">
+          <p class="mb-4 text-3xl font-bold text-primary">01</p>
+          <h3 class="mb-3 text-xl font-bold">Understand</h3>
+          <p class="leading-7 opacity-80">
+            Understand the existing environment, requirements and business
+            objectives.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border bg-white p-7">
+          <p class="mb-4 text-3xl font-bold text-primary">02</p>
+          <h3 class="mb-3 text-xl font-bold">Plan</h3>
+          <p class="leading-7 opacity-80">
+            Identify the technical requirements and define a suitable
+            implementation approach.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border bg-white p-7">
+          <p class="mb-4 text-3xl font-bold text-primary">03</p>
+          <h3 class="mb-3 text-xl font-bold">Implement</h3>
+          <p class="leading-7 opacity-80">
+            Execute the agreed technical work with attention to security,
+            reliability and operational needs.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border bg-white p-7">
+          <p class="mb-4 text-3xl font-bold text-primary">04</p>
+          <h3 class="mb-3 text-xl font-bold">Support</h3>
+          <p class="leading-7 opacity-80">
+            Provide support and knowledge transfer aligned with the
+            engagement requirements.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section-spacing-lg-vertical">
+    <div class="container">
+      <div class="mx-auto max-w-4xl text-center">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
+          Our Principles
+        </p>
+
+        <h2 class="text-h2 mb-10">What Guides Our Work</h2>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border p-7 text-center">
+          <h3 class="mb-3 text-xl font-bold">Reliability</h3>
+          <p class="leading-7 opacity-80">
+            Focus on dependable systems and consistent technology operations.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border p-7 text-center">
+          <h3 class="mb-3 text-xl font-bold">Security</h3>
+          <p class="leading-7 opacity-80">
+            Consider data protection, access management and security
+            throughout technology engagements.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border p-7 text-center">
+          <h3 class="mb-3 text-xl font-bold">Practical Solutions</h3>
+          <p class="leading-7 opacity-80">
+            Prioritize solutions that address real technical and
+            operational requirements.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="section-spacing-lg-vertical bg-dark text-white">
+    <div class="container">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
+          Let's Connect
+        </p>
+
+        <h2 class="text-h2 mb-5">
+          Looking for Database or IT Solutions?
+        </h2>
+
+        <p class="mx-auto mb-8 max-w-2xl leading-8 opacity-80">
+          Tell us about your technology requirements. Connect with One13Tech
+          to discuss database, cloud, infrastructure, training or staffing
+          services.
+        </p>
+
+        <a
+          href="/contact/"
+          class="inline-flex items-center justify-center rounded-lg bg-primary px-8 py-4 font-semibold text-white transition hover:opacity-90"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>
