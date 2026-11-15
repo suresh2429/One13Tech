@@ -200,8 +200,9 @@ export const getLocaleUrlCTM = (
 
   function checkIsExternal(url: string) {
     try {
-      const parsedUrl = new URL(url, config.site.baseUrl);
-      const baseUrl = new URL(config.site.baseUrl);
+      const deploymentSite = import.meta.env.SITE || config.site.baseUrl;
+      const parsedUrl = new URL(url, deploymentSite);
+      const baseUrl = new URL(deploymentSite);
 
       // Only consider HTTP/HTTPS URLs
       if (!parsedUrl.protocol.startsWith("http")) {
@@ -250,7 +251,16 @@ export const getLocaleUrlCTM = (
       hash = url.split("#")[1];
     }
   }
+// Remove Astro deployment base path before processing language URLs
+const basePath = (import.meta.env.BASE_URL || "/").replace(/\/+$/, "");
 
+if (
+  basePath &&
+  basePath !== "/" &&
+  (updatedUrl === basePath || updatedUrl.startsWith(`${basePath}/`))
+) {
+  updatedUrl = updatedUrl.slice(basePath.length) || "/";
+}
   // Remove any existing language directories from the URL
   for (const langDir of languageDirectories) {
     if (updatedUrl.startsWith(`${langDir}/`)) {
@@ -310,6 +320,26 @@ export const getLocaleUrlCTM = (
 
   // Add trailing slash if needed
   updatedUrl = trailingSlashChecker(updatedUrl);
+  // Apply Astro's deployment base path
+if (
+  basePath &&
+  basePath !== "/" &&
+  updatedUrl !== basePath &&
+  !updatedUrl.startsWith(`${basePath}/`)
+) {
+  updatedUrl = `${basePath}${updatedUrl.startsWith("/") ? "" : "/"}${updatedUrl}`;
+}
+  // Apply Astro's deployment base path (e.g. /One13Tech on GitHub Pages)
+
+
+if (
+  basePath &&
+  basePath !== "/" &&
+  updatedUrl !== basePath &&
+  !updatedUrl.startsWith(`${basePath}/`)
+) {
+  updatedUrl = `${basePath}${updatedUrl.startsWith("/") ? "" : "/"}${updatedUrl}`;
+}
 
   // Reconstruct the complete URL if the original URL is absolute, meaning it includes both a protocol and a hostname.
   if (isAbsoluteUrl) {

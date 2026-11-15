@@ -1,21 +1,21 @@
+
 ---
 import Base from "@/layouts/Base.astro";
 import { getCollectionCTM } from "@/lib/contentParser.astro";
 import { supportedLanguages } from "@/lib/utils/i18nUtils.ts";
 import config from ".astro/config.generated.json";
 import SinglePageLayout from "@/components/SinglePageLayout.astro";
+import PageHeader from "@/components/widgets/PageHeader.astro";
 import extractSlug from "@/lib/utils/extractSlug";
 
-// get static paths for all pages
 export async function getStaticPaths() {
   const paths = await Promise.all(
     supportedLanguages.map(async (lang) => {
       const { defaultLanguage, showDefaultLangInUrl } =
         config.settings.multilingual;
 
-      let pages = await getCollectionCTM("pages", lang.languageCode);
+      const pages = await getCollectionCTM("pages", lang.languageCode);
 
-      // Generate static path entry
       return pages.map((page) => ({
         params: {
           lang:
@@ -35,8 +35,10 @@ export async function getStaticPaths() {
 }
 
 const { page } = Astro.props;
+const isCareersPage = extractSlug(page).split("/").pop() === "careers";
 ---
 
 <Base {...page.data}>
+  {isCareersPage && <PageHeader content={{ title: page.data.title }} />}
   <SinglePageLayout content={{ ...page.data, ...page }} />
 </Base>

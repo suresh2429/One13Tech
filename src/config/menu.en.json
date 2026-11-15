@@ -1,186 +1,165 @@
-
-{
-  "header": [
-    {
-      "enable": true,
-      "name": "Home",
-      "url": "/"
-    },
-    {
-      "enable": true,
-      "name": "Services",
-      "url": "/services/",
-      "hasChildren": true,
-      "children": [
-        {
-          "enable": true,
-          "name": "All Services",
-          "url": "/services/"
-        },
-        {
-          "enable": true,
-          "name": "Database Administration & Consulting",
-          "url": "/services/service-09/"
-        },
-        {
-          "enable": true,
-          "name": "Database Migration & Modernization",
-          "url": "/services/service-07/"
-        },
-        {
-          "enable": true,
-          "name": "Database Performance Optimization",
-          "url": "/services/service-06/"
-        },
-        {
-          "enable": true,
-          "name": "Database Security & Auditing",
-          "url": "/services/service-01/"
-        },
-        {
-          "enable": true,
-          "name": "High Availability & Disaster Recovery",
-          "url": "/services/service-03/"
-        },
-        {
-          "enable": true,
-          "name": "Cloud & Infrastructure Consulting",
-          "url": "/services/service-10/"
-        },
-        {
-          "enable": true,
-          "name": "Database Training & Knowledge Development",
-          "url": "/services/service-04/"
-        },
-        {
-          "enable": true,
-          "name": "IT & Non-IT Staffing, Recruitment & Contract Staffing",
-          "url": "/services/service-08/"
-        },
-        {
-          "enable": true,
-          "name": "Managed IT Support & Services",
-          "url": "/services/service-05/"
-        }
-      ]
-    },
-    {
-      "enable": true,
-      "name": "Blog",
-      "url": "/blog/"
-    },
-    {
-      "enable": true,
-      "name": "Team",
-      "url": "/team/"
-    }
-  ],
-  "footer": [
-    {
-      "label": "Quick Links",
-      "list": [
-        {
-          "enable": true,
-          "name": "Our Team",
-          "url": "/team/",
-          "active": true
-        },
-        {
-          "enable": true,
-          "name": "Blogs",
-          "url": "/blog/"
-        },
-        {
-          "enable": true,
-          "name": "About Us",
-          "url": "#"
-        },
-        {
-          "enable": true,
-          "name": "Careers",
-          "url": "#"
-        },
-        {
-          "enable": true,
-          "name": "Contact",
-          "url": "#"
-        }
-      ]
-    },
-    {
-      "label": "Services",
-      "list": [
-        {
-          "enable": true,
-          "name": "Database Administration & Consulting",
-          "url": "/services/service-09/"
-        },
-        {
-          "enable": true,
-          "name": "Database Migration & Modernization",
-          "url": "/services/service-07/"
-        },
-        {
-          "enable": true,
-          "name": "Database Performance Optimization",
-          "url": "/services/service-06/"
-        },
-        {
-          "enable": true,
-          "name": "Database Security & Auditing",
-          "url": "/services/service-01/"
-        },
-        {
-          "enable": true,
-          "name": "High Availability & Disaster Recovery",
-          "url": "/services/service-03/"
-        },
-        {
-          "enable": true,
-          "name": "Cloud & Infrastructure Consulting",
-          "url": "/services/service-10/"
-        },
-        {
-          "enable": true,
-          "name": "Database Training & Knowledge Development",
-          "url": "/services/service-04/"
-        },
-        {
-          "enable": true,
-          "name": "IT & Non-IT Staffing, Recruitment & Contract Staffing",
-          "url": "/services/service-08/"
-        },
-        {
-          "enable": true,
-          "name": "Managed IT Support & Services",
-          "url": "/services/service-05/"
-        }
-      ]
-    },
-    {
-      "label": "Company",
-      "list": [
-        {
-          "enable": true,
-          "name": "All Services",
-          "url": "/services/"
-        },
-        {
-          "enable": true,
-          "name": "Latest Posts",
-          "url": "/blog/"
-        },
-        {
-          "enable": true,
-          "name": "Terms & Conditions",
-          "url": "/terms-conditions/"
-        },
-        {
-          "enable": true,
-          "name": "Privacy Policy",
-          "url": "/privacy-policy/"
-        }
-      ]
-    }
-  ]
+﻿{
+    "header":  [
+                   {
+                       "enable":  true,
+                       "name":  "Home",
+                       "url":  "/"
+                   },
+                   {
+                       "enable":  true,
+                       "name":  "Services",
+                       "url":  "/services/",
+                       "hasChildren":  true,
+                       "children":  [
+                                        {
+                                            "enable":  true,
+                                            "name":  "All Services",
+                                            "url":  "/services/"
+                                        },
+                                        {
+                                            "enable":  true,
+                                            "name":  "Database Administration \u0026 Consulting",
+                                            "url":  "/services/service-09/"
+                                        },
+                                        {
+                                            "enable":  true,
+                                            "name":  "Database Migration \u0026 Modernization",
+                                            "url":  "/services/service-07/"
+                                        },
+                                        {
+                                            "enable":  true,
+                                            "name":  "Database Performance Optimization",
+                                            "url":  "/services/service-06/"
+                                        },
+                                        {
+                                            "enable":  true,
+                                            "name":  "Database Security \u0026 Auditing",
+                                            "url":  "/services/service-01/"
+                                        },
+                                        {
+                                            "enable":  true,
+                                            "name":  "High Availability \u0026 Disaster Recovery",
+                                            "url":  "/services/service-03/"
+                                        },
+                                        {
+                                            "enable":  true,
+                                            "name":  "Cloud \u0026 Infrastructure Consulting",
+                                            "url":  "/services/service-10/"
+                                        },
+                                        {
+                                            "enable":  true,
+                                            "name":  "Database Training \u0026 Knowledge Development",
+                                            "url":  "/services/service-04/"
+                                        },
+                                        {
+                                            "enable":  true,
+                                            "name":  "IT \u0026 Non-IT Staffing, Recruitment \u0026 Contract Staffing",
+                                            "url":  "/services/service-08/"
+                                        },
+                                        {
+                                            "enable":  true,
+                                            "name":  "Managed IT Support \u0026 Services",
+                                            "url":  "/services/service-05/"
+                                        }
+                                    ]
+                   },
+                   {
+                       "enable":  true,
+                       "name":  "Blog",
+                       "url":  "/blog/"
+                   },
+                   {
+                       "enable":  true,
+                       "name":  "Team",
+                       "url":  "/team/"
+                   },
+		   {
+ 		      "enable": true,
+  		      "name": "Careers",
+                      "url": "/careers/"
+		   }
+               ],
+    "footer":  [
+                   {
+                       "label":  "Quick Links",
+                       "list":  [
+                                    {
+                                        "enable":  true,
+                                        "name":  "Our Team",
+                                        "url":  "/team/",
+                                        "active":  true
+                                    },
+                                    {
+                                        "enable":  true,
+                                        "name":  "Blogs",
+                                        "url":  "/blog/"
+                                    },
+                                    {
+                                        "enable":  true,
+                                        "name":  "About Us",
+                                        "url":  "#"
+                                    },
+                                    {
+                                        "enable":  true,
+                                        "name":  "Careers",
+                                        "url":  "/careers/"
+                                    },
+                                    {
+                                        "enable":  true,
+                                        "name":  "Contact",
+                                        "url":  "/#contact"
+                                    }
+                                ]
+                   },
+                   {
+                       "label":  "Services",
+                       "list":  [
+                                    {
+                                        "enable":  true,
+                                        "name":  "Database Administration \u0026 Consulting",
+                                        "url":  "/services/service-09/"
+                                    },
+                                    {
+                                        "enable":  true,
+                                        "name":  "Database Migration \u0026 Modernization",
+                                        "url":  "/services/service-07/"
+                                    },
+                                    {
+                                        "enable":  true,
+                                        "name":  "Database Performance Optimization",
+                                        "url":  "/services/service-06/"
+                                    },
+                                    {
+                                        "enable":  true,
+                                        "name":  "Database Security \u0026 Auditing",
+                                        "url":  "/services/service-01/"
+                                    },
+                                    {
+                                        "enable":  true,
+                                        "name":  "High Availability \u0026 Disaster Recovery",
+                                        "url":  "/services/service-03/"
+                                    },
+                                    {
+                                        "enable":  true,
+                                        "name":  "Cloud \u0026 Infrastructure Consulting",
+                                        "url":  "/services/service-10/"
+                                    },
+                                    {
+                                        "enable":  true,
+                                        "name":  "Database Training \u0026 Knowledge Development",
+                                        "url":  "/services/service-04/"
+                                    },
+                                    {
+                                        "enable":  true,
+                                        "name":  "IT \u0026 Non-IT Staffing, Recruitment \u0026 Contract Staffing",
+                                        "url":  "/services/service-08/"
+                                    },
+                                    {
+                                        "enable":  true,
+                                        "name":  "Managed IT Support \u0026 Services",
+                                        "url":  "/services/service-05/"
+                                    }
+                                ]
+                   }
+               ]
 }

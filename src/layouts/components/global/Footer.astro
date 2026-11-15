@@ -1,3 +1,4 @@
+
 ---
 import { getLocaleUrlCTM } from "@/lib/utils/i18nUtils.ts";
 import { markdownify } from "@/lib/utils/textConverter";
@@ -27,9 +28,9 @@ const copyrightText = splitProtectedText(
 ).join(" / ");
 
 const socialOrder = ["facebook", "linkedin", "twitter", "instagram"];
+
 const getSocialSortIndex = (label: string) => {
   const index = socialOrder.indexOf(label);
-
   return index === -1 ? socialOrder.length : index;
 };
 
@@ -49,20 +50,25 @@ const footerSocials = social.main
   ]}>
   <div class="container">
     <div class="section-spacing-vertical">
-      <div class="grid gap-y-12 lg:grid-cols-12 lg:gap-x-8">
-        <div class="lg:col-span-4">
+      <div class="grid grid-cols-1 gap-y-12 lg:grid-cols-12 lg:gap-x-8">
+
+        <!-- Company information -->
+        <div class="min-w-0 lg:col-span-4">
           <Logo class="gap-1.5" />
+
           {
             footerDescription && (
               <p
-                class="footer-description leading-body text-text-default mt-6 max-w-md text-base"
-                set:html={markdownify(footerDescription)}
-              />
+                class="footer-description leading-body text-text-default mt-6 max-w-md text-base">
+                <span set:html={markdownify(footerDescription)} />
+              </p>
             )
           }
-          <div class="mt-4 flex flex-wrap gap-4">
-            <div class="flex items-center gap-2 hover:underline">
+
+          <div class="mt-4 flex flex-col gap-4">
+            <div class="flex min-w-0 items-center gap-2 hover:underline">
               <svg
+                class="shrink-0"
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
@@ -73,11 +79,12 @@ const footerSocials = social.main
                   fill="currentColor">
                 </path>
               </svg>
-              <span set:html={markdownify(phone)} />
+              <span class="min-w-0 break-words" set:html={markdownify(phone)} />
             </div>
 
-            <div class="flex items-center gap-2 hover:underline">
+            <div class="flex min-w-0 items-center gap-2 hover:underline">
               <svg
+                class="shrink-0"
                 width="20"
                 height="20"
                 viewBox="0 0 20 20"
@@ -89,7 +96,7 @@ const footerSocials = social.main
                 </path>
               </svg>
 
-              <span set:html={markdownify(email)} />
+              <span class="min-w-0 break-words" set:html={markdownify(email)} />
             </div>
           </div>
 
@@ -102,21 +109,24 @@ const footerSocials = social.main
           />
         </div>
 
+        <!-- Footer navigation -->
         <nav
           aria-label={t("aria.footer")}
-          class="grid gap-y-10 sm:grid-cols-2 sm:gap-x-10 md:sm:grid-cols-3 lg:col-span-7 lg:col-start-6 lg:gap-x-12 xl:gap-x-16">
+          class="grid min-w-0 grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:col-span-8 lg:col-start-5 lg:grid-cols-2 xl:gap-x-12">
+
           {
             footerColumns.map(({ label, list }) => (
-              <div>
+              <div class="min-w-0">
                 {label && (
                   <h2 class="footer-heading text-xl" set:html={label} />
                 )}
-                <ul class="mt-5 flex flex-col gap-2.5">
+
+                <ul class="mt-5 flex min-w-0 flex-col gap-2.5">
                   {list.map((item) => (
-                    <li>
+                    <li class="min-w-0">
                       <a
                         class:list={[
-                          "footer-link leading-body text-text-default hover:text-dark text-base transition duration-300 sm:whitespace-nowrap",
+                          "footer-link block min-w-0 whitespace-normal break-words leading-body text-text-default hover:text-dark text-base transition duration-300",
                           item.active && "active text-dark",
                         ]}
                         href={getLocaleUrlCTM(item.url, Astro.currentLocale)}
@@ -131,15 +141,35 @@ const footerSocials = social.main
         </nav>
       </div>
     </div>
-    <div class="footer-bottom border-t py-5 text-center">
-      {
-        config.settings.copyright?.enable && (
-          <p
-            class="footer-copyright leading-body text-text-default text-base"
-            set:html={markdownify(copyrightText)}
-          />
-        )
-      }
-    </div>
+
+    <!-- Copyright -->
+   <div class="footer-bottom border-t py-5">
+  <div class="flex flex-col items-center justify-between gap-3 text-center sm:flex-row sm:text-left">
+
+    {
+      config.settings.copyright?.enable && (
+        <p
+          class="footer-copyright leading-body text-text-default text-sm"
+          set:html={markdownify(copyrightText)}
+        />
+      )
+    }
+
+    <nav aria-label="Legal information" class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+      <a
+        href={getLocaleUrlCTM("/privacy-policy/", Astro.currentLocale)}
+        class="footer-link text-sm text-text-default hover:text-dark transition duration-300">
+        Privacy Policy
+      </a>
+
+      <a
+        href={getLocaleUrlCTM("/terms-conditions/", Astro.currentLocale)}
+        class="footer-link text-sm text-text-default hover:text-dark transition duration-300">
+        Terms &amp; Conditions
+      </a>
+    </nav>
+
+  </div>
+</div>
   </div>
 </footer>

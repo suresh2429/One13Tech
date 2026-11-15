@@ -1,13 +1,13 @@
-﻿# Site Configuration
+# Site Configuration
 [site]
-  title            = "Techlo Lite" # Shared title for SEO and OpenGraph
-  description      = "Techlo Lite is a free IT solutions and services theme for managed IT services, cloud consulting, cybersecurity, software development, and digital transformation websites." # Shared description for SEO and OpenGraph
-  tagline          = "Free IT Solutions & Services Astro & Tailwind CSS Theme"
+  title            = "One13Tech" # Shared title for SEO and OpenGraph
+  description      = "One13Tech delivers database administration, migration, performance optimization, cloud infrastructure, security, training and staffing solutions for businesses." # Shared description for SEO and OpenGraph
+  tagline          = "Connect. Secure. Scale."
   taglineSeparator = "" # default is " - " 
   baseUrl          = "https://www.schemazendb.com" # Base URL for the site and used in OpenGraph meta tags.
   logo             = "/images/logo.svg" # Path to the site's logo
   logoAlternate    = "" # Path to the site's logo
-  logoText         = "Techlo" # Text displayed next to the logo
+  logoText         = "One13Tech" # Text displayed next to the logo
   logoWidth        = "24px" # Width of the logo
   logoHeight       = "36px" # Height of the logo
 
@@ -25,14 +25,14 @@
 # Specific SEO configurations that complement the general site settings.
 # -----------------------------------------------------------------------------------------------------------------------------------
 [seo]
-  author = "Getastrothemes"
+  author = "One13Tech"
   keywords = [
-    "astro technology template",
-    "astro template",
-    "astro theme",
-    "free astro theme",
-    "it solution theme",
-    "technology astro theme",
+    "database administration",
+    "database migration",
+    "database performance optimization",
+    "cloud infrastructure consulting",
+    "database security",
+    "IT staffing and managed services",
   ]
   robots = "index, follow" # Instructs search engines on how to crawl and index the pages.
 
@@ -95,7 +95,7 @@
     threshold            = 0.14
 
   # For changing footer description and footer copyright in different languages see src/i18n/en.json and src/i18n/fr.json
-  # We kindly appreciate it if you retain the theme copyright. Thank you for supporting Getastrothemes!
+  # One13Tech website copyright information.
   [settings.copyright]
     enable = true
     text   = "Copyright © 2026 One13Tech. All rights reserved."
@@ -120,7 +120,7 @@
     enable               = true
     defaultLanguage      = "en"
     disableLanguages     = [""] # List of languages to disable (eg: ["fr", "es"])
-    showDefaultLangInUrl = false # Show default language in URL (eg: https://getastrothemes.com/en/)
+    showDefaultLangInUrl = false # Show default language in URL (eg: https://www.schemazendb.com/en/)
 
   # Global Contact Information
   [settings.contactInfo]

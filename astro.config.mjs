@@ -22,7 +22,10 @@ let {
 
 // https://astro.build/config
 export default defineConfig({
-  site: config.site.baseUrl ? config.site.baseUrl : "http://examplesite.com",
+  site: process.env.GITHUB_ACTIONS === "true"
+  ? "https://suresh2429.github.io"
+  : config.site.baseUrl || "http://localhost:4321",
+base: process.env.GITHUB_ACTIONS === "true" ? "/One13Tech" : "/",
   trailingSlash: config.site.trailingSlash ? "always" : "never",
   devToolbar: {
     enabled: true,
