@@ -1,113 +1,144 @@
----
-enable: true # Control the visibility of this section across all pages where it is used
-title: "Have Any Project on Your Mind?"
-description: "Great! We're excited to hear from you and let's start something"
-officeHours: "Office Hours: Mon - Sat: 8:00 AM - 10:00 PM" # Optional; remove or set empty to hide this row.
 
-# Check config.toml file for form action related settings
-# this is also used in the footer of the personal portfolio homepage
-formTitle: "Fill The Contact Form"
-formDescription: "Tell us what you need and our team will reply with useful next steps."
+---
+enable: true
+
+title: "Let's Discuss Your Technology Requirements"
+
+description: "Have a database or IT infrastructure challenge? Tell us about your requirements. The One13Tech team will help you identify the right solution."
+
+officeHours: "Business Hours: Monday - Saturday"
+
+formTitle: "Send Us Your Enquiry"
+
+formDescription: "Share your requirements with us. Our team will get in touch to discuss how we can help."
 
 form:
-  emailSubject: "New form submission from your website" # Customized email subject (applicable when anyone submit form, form submission may receive by email depend on provider)
-  submitButton:
-    # Refer to the `sharedButton` schema in `src/sections.schema.ts` for all available configuration options (e.g., enable, label, url, hoverEffect, variant, icon, tag, rel, class, target, etc.)
-    enable: true
-    label: "Send Message"
-    class: "w-full justify-center rounded-md"
-    hoverEffect: "magnetic-text-flip" # Optional: text-flip | creative-fill | magnetic | magnetic-text-flip
-    # variant: "" # Optional: fill | outline | text | circle
-    # rel: "" # Optional
-    # target: "" # Optional
+  emailSubject: "New Business Enquiry - One13Tech"
 
-  # This note will show at the end of form
-  # note: |
-  #   Your data is safe with us. We respect your privacy and never share your information. <br /> Read our [Privacy Policy](/privacy-policy/).
+  submitButton:
+    enable: true
+    label: "Submit Enquiry"
+    class: "w-full justify-center rounded-md"
+    hoverEffect: "magnetic-text-flip"
+    variant: "fill"
+
+  note: |
+    Your information will be used only to respond to your enquiry.
+
   inputs:
-    - label: "Your name"
+    - label: "Your Name"
       name: "Name"
-      placeholder: "Your name"
+      placeholder: "Enter your full name"
       required: true
       halfWidth: true
-    - label: "Email address"
+
+    - label: "Business Email"
       name: "Email"
-      placeholder: "Email address"
+      placeholder: "Enter your business email"
       type: "email"
       required: true
       halfWidth: true
-    - label: "Estimated budget"
-      name: "Budget"
-      placeholder: "Estimated budget"
-      type: "number"
+
+    - label: "Company Name"
+      name: "Company"
+      placeholder: "Enter your company name"
       halfWidth: true
-    - label: "Preferred start date"
-      name: "Start Date"
-      placeholder: "Preferred start date"
-      type: "date"
+
+    - label: "Phone Number"
+      name: "Phone"
+      placeholder: "Enter your contact number"
+      type: "tel"
       halfWidth: true
-    - label: "Service interest"
+
+    - label: "Service Required"
       name: "Service"
       placeholder: "Select a service"
       required: true
       dropdown:
         type: "search"
         search:
-          placeholder: "Search service"
+          placeholder: "Search our services"
         items:
-          - label: "Web & Mobile App Development"
-            value: "Web & Mobile App Development"
-          - label: "Cloud Infrastructure"
-            value: "Cloud Infrastructure"
-          - label: "Cybersecurity Review"
-            value: "Cybersecurity Review"
-          - label: "Data Tracking & Analytics"
-            value: "Data Tracking & Analytics"
-          - label: "Automation Workflow"
-            value: "Automation Workflow"
-    - label: "New project"
+          - label: "Database Administration & Managed Services"
+            value: "Database Administration & Managed Services"
+          - label: "Database Migration & Modernization"
+            value: "Database Migration & Modernization"
+          - label: "Database Performance Optimization"
+            value: "Database Performance Optimization"
+          - label: "Database Security & Auditing"
+            value: "Database Security & Auditing"
+          - label: "High Availability & Disaster Recovery"
+            value: "High Availability & Disaster Recovery"
+          - label: "Cloud & Infrastructure Consulting"
+            value: "Cloud & Infrastructure Consulting"
+          - label: "Database Training"
+            value: "Database Training"
+          - label: "Technical Staffing & Recruitment"
+            value: "Technical Staffing & Recruitment"
+          - label: "Other IT Requirements"
+            value: "Other IT Requirements"
+
+    - label: "Database Technology"
+      name: "Technology"
+      placeholder: "Select your database technology"
+      dropdown:
+        type: "search"
+        search:
+          placeholder: "Search technology"
+        items:
+          - label: "MongoDB"
+            value: "MongoDB"
+          - label: "PostgreSQL"
+            value: "PostgreSQL"
+          - label: "Sybase ASE"
+            value: "Sybase ASE"
+          - label: "IBM DB2"
+            value: "IBM DB2"
+          - label: "Microsoft SQL Server"
+            value: "Microsoft SQL Server"
+          - label: "Greenplum"
+            value: "Greenplum"
+          - label: "Apache Cloudberry"
+            value: "Apache Cloudberry"
+          - label: "MySQL / MariaDB"
+            value: "MySQL / MariaDB"
+          - label: "Other"
+            value: "Other"
+
+    - label: "Project Type"
       name: "Project Type"
-      value: "New project"
+      value: "New Project"
       type: "radio"
       group: "Project Type"
-      groupLabel: "Project type"
+      groupLabel: "What type of assistance do you need?"
       checked: true
       halfWidth: true
-    - label: "Improve existing system"
+
+    - label: "Existing Environment"
       name: "Project Type"
-      value: "Improve existing system"
+      value: "Existing Environment"
       type: "radio"
       group: "Project Type"
       halfWidth: true
-    - label: "Email"
-      name: "Preferred Contact"
-      value: "Email"
-      type: "checkbox"
-      group: "Preferred Contact"
-      groupLabel: "Preferred contact method"
-      checked: true
-      halfWidth: true
-    - label: "Phone"
-      name: "Preferred Contact"
-      value: "Phone"
-      type: "checkbox"
-      group: "Preferred Contact"
-      halfWidth: true
-    - label: "Write your message"
+
+    - label: "Describe Your Requirements"
       name: "Message"
-      placeholder: "Write your message"
+      placeholder: "Tell us about your database environment, challenges, project scope and requirements."
       tag: "textarea"
       rows: "5"
       required: true
-    - label: "I agree to be contacted about this request."
+
+    - label: "I agree to be contacted regarding this enquiry."
       name: "Consent"
       value: true
       type: "checkbox"
       required: true
+
     - note: success
       parentClass: "hidden text-sm message success"
-      content: "Thank you. We received your request and will reply with useful next steps."
+      content: "Thank you for contacting One13Tech. We have received your enquiry."
+
     - note: deprecated
       parentClass: "hidden text-sm message error"
-      content: "Something went wrong. Please try again or contact us directly."
+      content: "We could not submit your enquiry. Please try again or contact itservices@one13tech.com."
 ---
