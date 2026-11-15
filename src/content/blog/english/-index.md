@@ -1,12 +1,9 @@
----
-title: "Blog"
-image: "/images/blog/blog-header.png"
-metaDescription: "Read practical articles on software delivery, cloud operations, cybersecurity, automation, and digital strategy."
+﻿---
+title: "Insights"
+image: "/images/og-image.jpg"
+metaDescription: "Practical insights on database administration, Apache Cloudberry, database migration, performance, security, high availability and cloud infrastructure."
 draft: false
-
-# Settings of blog list page layout
 options:
-  layout: "grid" # grid | creative | horizontal | overlay
-  columns: 2 # 1 / 2 / 3
-  # Use `/blog/creative/` for the sidebar list layout shown in Blogs V2.
+  layout: "grid"
+  columns: 2
 ---

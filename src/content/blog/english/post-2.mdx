@@ -1,42 +1,61 @@
----
-title: "E-Commerce Design Tips for Better Conversion"
-image: "/images/blog/cyber-resilience-playbook.jpg"
-date: 2022-06-07
-author: "Allium Johnson"
+﻿---
+title: "Greenplum to Apache Cloudberry: Key Migration Considerations"
+image: "/images/services/database-migration-modernization.jpg"
+date: 2026-11-15
 categories:
-  - Business
-  - Insights
+  - Database Migration
 tags:
-  - "design"
-  - "ecommerce"
-  - "strategy"
-
+  - "Greenplum"
+  - "Apache Cloudberry"
+  - "Migration"
 draft: false
 ---
 
-E-commerce design should make buying decisions easier. Strong stores guide visitors from product discovery to checkout with clear information, fast pages, and fewer distractions.
+Migrating from Greenplum to Apache Cloudberry requires more than transferring table data. A successful migration also considers database objects, distribution policies, permissions, external integrations and application compatibility.
 
-Start by reviewing the product page. Customers need useful photos, direct benefits, transparent pricing, shipping details, and social proof before they feel confident enough to buy.
+## Assess the source environment
 
-> Conversion improves when every screen answers the next question a customer is likely to ask.
+Before starting, inventory:
 
-Navigation, search, filters, and cart behavior also matter. If shoppers cannot find the right product quickly, even a beautiful design will lose revenue.
+- Databases, schemas and table sizes
+- Partitioned tables and partition boundaries
+- Distribution keys and storage options
+- Views, functions, procedures and triggers
+- Roles, grants and ownership
+- External tables and data integrations
+- Application connections and dependencies
 
-<ImageList>
-  <ImageItem
-    width="1/2"
-    imageSrc="/images/gallery/3.jpg"
-    imageAlt="E-commerce product page review"
-  />
-  <ImageItem
-    width="1/2"
-    imageSrc="/images/gallery/4.jpg"
-    imageAlt="Online checkout experience design"
-  />
-</ImageList>
+This assessment helps identify migration risks before the target environment is populated.
 
-## Keep the Path Simple
+## Plan the migration approach
 
-Reduce unnecessary steps between product selection and purchase. Use clear buttons, readable summaries, and trust signals near important decisions.
+Choose migration methods based on data volume, downtime requirements, object compatibility and available tooling.
 
-Small improvements in clarity, speed, and checkout flow often create meaningful gains across the full buying journey.
+Validate the chosen approach with representative tables before migrating the full environment. Large tables, partitioned tables and objects with dependencies may need additional attention.
+
+## Validate data and database objects
+
+After data transfer, compare source and target results. Useful checks include:
+
+- Table and partition row counts
+- Data type and schema comparisons
+- Distribution and storage configuration
+- View and function validity
+- Object ownership and permissions
+- Application read and write operations
+
+Row counts alone do not prove that a migration is complete. Include application-level validation and checks for important business data.
+
+## Review application access
+
+Create appropriate application roles and grant only the required privileges. Review access to existing objects as well as default privileges for future objects.
+
+External tables and data integrations should be tested separately because they can depend on operating system services, network access and external configuration.
+
+## Plan post-migration maintenance
+
+Review statistics, query plans, resource settings, monitoring and backup procedures after migration. Performance characteristics may change when workloads run on a different platform or infrastructure configuration.
+
+## Conclusion
+
+A structured migration combines inventory, controlled data movement, object validation, access testing and post-migration tuning. Treating these as separate workstreams makes the migration easier to verify and operate.
