@@ -1,4 +1,4 @@
-# Site Configuration
+﻿# Site Configuration
 [site]
   title            = "Techlo Lite" # Shared title for SEO and OpenGraph
   description      = "Techlo Lite is a free IT solutions and services theme for managed IT services, cloud consulting, cybersecurity, software development, and digital transformation websites." # Shared description for SEO and OpenGraph
@@ -11,7 +11,7 @@
   logoWidth        = "24px" # Width of the logo
   logoHeight       = "36px" # Height of the logo
 
-  # Add a trailing slash at the end of URLs (e.g., https://example.com/, https://example.com/contact/)˝
+  # Add a trailing slash at the end of URLs (e.g., https://example.com/, https://example.com/contact/)Ë
   # Note: Manually restart your server when you change this value
   trailingSlash = true
 
@@ -63,11 +63,11 @@
   # Form action URL for the contact form (For more settings related to form see "src/content/sections/contact-section.md")
   # Set this to your own endpoint before you deploy. Submissions go wherever it points (see "Contact Form Setup" in the README).
   # formsubmit.co: "https://formsubmit.co/your_email@example.com" | formspree: "https://formspree.io/f/your_form_id" | netlify: "/"
-  contactFormAction = "https://formsubmit.co/your_email@example.com"
+  contactFormAction = "https://formsubmit.co/itservices@one13tech.com"
   # formspree | formsubmit.co | netlify (default is formsubmit.co)
   contactFormProvider = "formsubmit.co"
 
-  footerDescription = "" # Check src/i18n/en.json and src/i18n/fr.json for changing the footer description in different languages or directly add value here if you are not using internationalization feature
+  footerDescription = "One13Tech delivers reliable database, cloud, infrastructure, training and staffing solutions. We help businesses connect, secure and scale their technology operations." # Check src/i18n/en.json and src/i18n/fr.json for changing the footer description in different languages or directly add value here if you are not using internationalization feature
 
   # Smooth scroll behavior powered by Lenis
   [settings.smoothScroll]
@@ -98,11 +98,11 @@
   # We kindly appreciate it if you retain the theme copyright. Thank you for supporting Getastrothemes!
   [settings.copyright]
     enable = true
-    text   = "" # Check src/i18n/en.json and src/i18n/fr.json for changing the copyright text in different languages or directly add value here if you are not using internationalization feature
+    text   = "Copyright © 2026 One13Tech. All rights reserved."
 
   # Mailchimp Subscription Form located in footer
   [settings.subscription]
-    enable            = true # Enables or disable the subscription form
+    enable            = false # Enables or disable the subscription form
     title             = "" # Check src/i18n/en.json and src/i18n/fr.json for changing the title in different languages or directly add value here if you are not using internationalization feature
     note              = "" # Check src/i18n/en.json and src/i18n/fr.json for changing the note in different languages or directly add value here if you are not using internationalization feature
     # PLACEHOLDER: replace with your own Mailchimp list URL before deploying. In Mailchimp, open
@@ -124,10 +124,10 @@
 
   # Global Contact Information
   [settings.contactInfo]
-    phone       = "[518-564-3200](tel:5185643200)"
-    email       = "[hello@example.com](mailto:hello@example.com)"
-    address     = "1791 Yorkshire Circle Kitty <br /> Hawk, NC 279499"
-    officeHours = "Office Hours: 8:00 AM – 10:00 PM"
+    phone       = "[+91 99622 82429](tel:+919962282429)"
+    email       = "[itservices@one13tech.com](mailto:itservices@one13tech.com)"
+    address     = "#314, Vestaa Lushes, Gopasandra, Muthanallur, Bangalore, Karnataka, India - 560099"
+    officeHours = "Business Hours: Monday - Saturday"
 
   # Header Offcanvas Configuration
   # Update social links in `src/config/social.json`
@@ -172,3 +172,4 @@
   content = """
   <script></script>
   """
+
