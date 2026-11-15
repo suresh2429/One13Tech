@@ -1,3 +1,4 @@
+
 ---
 enable: true
 imagePosition: "left"
@@ -7,34 +8,36 @@ images:
   small: "/images/skill/skill-2.jpg"
 
 title: |
-  We provide perfect IT solutions & technology
+  Expert Database & Technology Solutions for Your Business
+
 subtitle: |
-  Our team helps startups move from idea to launch with reliable systems, clear priorities, and practical technical support.
+  Powering business-critical systems with reliable database expertise, practical engineering, and enterprise technology support.
+
 description: |
-  We plan, design, build, and optimize digital products that are easy for teams to manage and ready for future growth.
+  One13Tech helps businesses build, manage, secure, and optimize their technology infrastructure. From database administration and migration to performance tuning, high availability, and infrastructure consulting, we deliver practical solutions that support business continuity and long-term growth.
 
 # EXTRATYPE OPTIONS: "skills" | "list-x" | "list-y" | "stats" | "none"
 extraType: "list-x"
 
-# SHARED BUTTON CONFIGURATION (Applies to all section buttons)
+# SHARED BUTTON CONFIGURATION
 buttons:
-  - enable: false # Boolean: true | false
+  - enable: true
     label: "Explore Our Services"
     url: "/services/"
-    tag: "a" # Enum: a | button
-    variant: "fill" # Enum: fill | fill-white | outline | text | circle
-    hoverEffect: "magnetic-text-flip" # Enum: text-flip | creative-fill | magnetic | magnetic-text-flip
-    icon: # Object
+    tag: "a"
+    variant: "fill"
+    hoverEffect: "magnetic-text-flip"
+    icon:
       enable: true
-      name: "ArrowUpRight" # String: Lucide Icon Name - https://lucide.de v/icons/?search=
-      position: "right" # Enum: left | right (Note: text variant is always right)
-    rel: "noopener"
-    target: "_blank" # String: _blank | _self
-    class: "" # String: Additional button Tailwind classes
+      name: "ArrowUpRight"
+      position: "right"
+    rel: ""
+    target: "_self"
+    class: ""
 
 listItems:
-  - title: "Provide Skills<br />Services"
-    icon: "Settings"
-  - title: "Urgent Support<br />For Clients"
+  - title: "Multi-Platform<br />Database Expertise"
+    icon: "Database"
+  - title: "Reliable<br />Technical Support"
     icon: "Headphones"
 ---
