@@ -107,7 +107,7 @@ const accentAppearance = currentLayout.hasDarkAppearance ? "light" : "dark";
       "header group/header",
       `header-${resolvedLayout}`,
       { "has-dark-background": currentLayout.hasDarkAppearance },
-      { "header-transparent": currentLayout.isTransparent },
+      { "header-transparent": currentLayout.isTransparent && Astro.url.pathname === "/" },
       ClassName,
     ]}>
     <nav class="relative container">
