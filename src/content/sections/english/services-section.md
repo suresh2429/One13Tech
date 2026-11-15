@@ -1,30 +1,28 @@
 ---
 enable: true
-title: "Our awesome services to <br/> give you success"
-
+title: Database & IT Services<br/>Designed for Reliability and Growth
 button:
-  # Refer to the `sharedButton` schema in `src/sections.schema.ts` for all available configuration options (e.g., enable, label, url, hoverEffect, variant, icon, tag, rel, class, target, etc.)
   enable: true
-  label: "View all services"
-  url: "/services/"
-  hoverEffect: "magnetic-text-flip" # Optional: text-flip | creative-fill | magnetic | magnetic-text-flip
-  variant: "fill" # Optional: fill | fill-white | outline | text | circle
-  # rel: "" # Optional
-  # target: "" # Optional
-  # class: "" # Optional
-  icon: # Optional
+  label: Explore All Services
+  url: /services/
+  hoverEffect: magnetic-text-flip
+  variant: fill
+  icon:
     enable: true
-    name: "ArrowUpRight"
-    position: "right" # left | right
-
+    name: ArrowUpRight
+    position: right
+  tag: a
 options:
-  layout: "carousel" # grid | carousel; carousel uses each service image as an overlay card background
+  layout: carousel
   limit: 6
-  marquee: # Used when layout is "carousel"
+  marquee:
     elementWidthAuto: false
-    elementWidth: "22rem"
-    elementWidthResponsive: "18rem"
+    elementWidth: 22rem
+    elementWidthResponsive: 18rem
     pauseOnHover: true
-    reverse: "" # reverse / ""
-    duration: "22s"
+    duration: 22s
+    fullWidth: false
+  iconPlacement: top
+  column: 3
+  sectionVerticalSpace: false
 ---
