@@ -1,5 +1,5 @@
+
 ---
-// src/layouts/components/cards/Card.astro
 import { getLocaleUrlCTM, useTranslations } from "@/lib/utils/i18nUtils.ts";
 import Button from "@/components/Button.astro";
 import extractSlug from "@/lib/utils/extractSlug";
@@ -15,12 +15,14 @@ interface Props {
 }
 
 const { content, class: className, options } = Astro.props;
+
 const { icon, title, description, image, button, collection } = {
   ...content,
   ...content.data,
 };
 
 const t = await useTranslations(Astro.currentLocale as string);
+
 const slugLocale = getLocaleUrlCTM(
   button?.url ? button.url : extractSlug(content),
   Astro.currentLocale,
@@ -31,9 +33,11 @@ const isGrid = options?.layout === "grid";
 const isImageOverlay = options?.layout === "carousel";
 const isButtonEnabled = slugLocale || button?.enable;
 const isIconLeft = icon && isGrid;
+
 const cursorType = collection === "services" ? "service" : "link";
 const cursorLabel =
   collection === "services" ? t("common.viewService") : t("common.learnMore");
+
 const cursorAttrs = isButtonEnabled
   ? {
       "data-cursor-label": cursorLabel,
@@ -47,40 +51,33 @@ const cursorAttrs = isButtonEnabled
     <article
       {...cursorAttrs}
       class:list={[
-        "group bg-theme-dark relative flex h-95 flex-col justify-end overflow-hidden rounded-2xl text-white",
+        "group relative flex h-[320px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white text-slate-900 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl",
         className,
-      ]}>
+      ]}
+    >
       {image && (
-        <OptimizedImage
-          src={image}
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          width={612}
-          height={760}
-          widths={[612, 768, 920]}
-          sizes="306px"
-          quality={90}
-          class="absolute inset-0 size-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-        />
+        <div class="flex h-[185px] shrink-0 items-center justify-center overflow-hidden bg-slate-50 p-5">
+          <OptimizedImage
+            src={image}
+            alt={title || ""}
+            loading="lazy"
+            width={612}
+            height={400}
+            widths={[400, 612, 768]}
+            sizes="306px"
+            quality={90}
+            class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
       )}
 
-      {/* Carousel cards transition the icon tile and overlay colors on hover. */}
-      <div class="to-theme-dark absolute inset-0 bg-linear-to-b from-transparent transition-opacity duration-300 group-hover:opacity-0" />
-      <div class="from-primary/0 to-primary absolute inset-0 bg-linear-to-b opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-
-      <div class="relative z-10 flex flex-col items-center px-7 pb-8 text-center">
-        {icon && (
-          <div class="bg-primary mb-5 flex size-18 items-center justify-center rounded-xl">
-            <DynamicIcon
-              name={icon}
-              inlineSvg={true}
-              class="has-inherited-colors size-9 text-white"
-            />
-          </div>
+      <div class="flex flex-1 items-center justify-center px-5 text-center">
+        {title && (
+          <h3
+            class="max-w-64 text-lg font-semibold text-slate-900"
+            set:html={title}
+          />
         )}
-
-        {title && <h3 class="max-w-64 text-xl text-white" set:html={title} />}
       </div>
 
       {slugLocale && (
@@ -99,7 +96,8 @@ const cursorAttrs = isButtonEnabled
         className,
         isIconLeft ? "flex-col md:flex-row" : "flex-col",
         isGrid && "border",
-      ]}>
+      ]}
+    >
       {icon && (
         <div class="bg-primary/10 group-hover:bg-primary mr-6 flex size-18 shrink-0 items-center justify-center rounded-2xl transition-all duration-300">
           <DynamicIcon
@@ -112,6 +110,7 @@ const cursorAttrs = isButtonEnabled
 
       <div class="flex flex-1 flex-col">
         {title && <h3 class="text-h6 mb-3" set:html={title} />}
+
         {description && (
           <p
             class:list={["mb-6 text-lg", !isIconLeft && "line-clamp-2"]}
