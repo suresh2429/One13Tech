@@ -1,15 +1,23 @@
+
 ---
 enable: true
-title: "Our working process on how<br />to grow your business"
+title: "Our Proven Process for Reliable<br />Database & IT Solutions"
+
 # Images should remain lightweight transparent illustrations for the process step layout.
 list:
-  - title: "Initiation & Planning"
-    description: "We clarify goals, risks, users, timelines, and the technical path forward."
+  - title: "Assessment & Discovery"
+    description: "We understand your business requirements, assess your existing database and infrastructure, identify challenges, and define the right technical approach."
     image: "/images/process/step-01.png"
-  - title: "Execution & Development"
-    description: "We design, build, integrate, and review each milestone with your team."
+
+  - title: "Planning & Solution Design"
+    description: "We prepare a practical implementation plan covering architecture, migration strategy, performance, security, availability, timelines, and risks."
     image: "/images/process/step-02.png"
-  - title: "Testing & Maintenance"
-    description: "We validate performance, fix issues, document systems, and support launch."
+
+  - title: "Implementation & Validation"
+    description: "We execute the agreed solution, configure and optimize systems, validate functionality and performance, and document the implementation."
     image: "/images/process/step-03.png"
+
+  - title: "Ongoing Support & Optimization"
+    description: "We provide technical support, monitor database health, troubleshoot issues, and recommend improvements to maintain reliability and performance."
+    image: "/images/process/step-04.png"
 ---
