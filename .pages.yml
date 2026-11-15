@@ -1,3 +1,483 @@
+media:
+  input: public/images
+  output: /images
+  extensions:
+  - jpg
+  - jpeg
+  - png
+  - webp
+  - svg
+  rename: safe
+components:
+  seo:
+    type: object
+    label: SEO Settings
+    fields:
+    - name: metaTitle
+      label: SEO Title
+      type: string
+    - name: metaDescription
+      label: SEO Description
+      type: text
+    - name: canonical
+      label: Canonical URL
+      type: string
+    - name: robots
+      label: Robots
+      type: string
+  button:
+    type: object
+    label: Button
+    fields:
+    - name: enable
+      type: boolean
+    - name: label
+      type: string
+    - name: url
+      type: string
+    - name: tag
+      type: select
+      options:
+        values:
+        - a
+        - button
+    - name: variant
+      type: select
+      options:
+        values:
+        - fill
+        - fill-white
+        - outline
+        - text
+        - circle
+    - name: hoverEffect
+      type: select
+      options:
+        values:
+        - text-flip
+        - creative-fill
+        - magnetic
+        - magnetic-text-flip
+    - name: target
+      type: string
+    - name: rel
+      type: string
+    - name: class
+      type: string
+    - name: icon
+      type: object
+      fields:
+      - name: enable
+        type: boolean
+      - name: name
+        type: string
+      - name: position
+        type: select
+        options:
+          values:
+          - left
+          - right
+content:
+- name: homepage
+  label: Homepage
+  type: group
+  items:
+  - name: home-en
+    label: English Homepage
+    type: file
+    path: src/content/homepage/english/-index.md
+    format: yaml-frontmatter
+    fields: &id001
+    - name: title
+      label: Page Title
+      type: string
+    - name: metaTitle
+      label: SEO Title
+      type: string
+    - name: metaDescription
+      label: SEO Description
+      type: text
+    - name: canonical
+      label: Canonical URL
+      type: string
+    - name: robots
+      label: Robots
+      type: string
+    - name: hasFooterDarkBackground
+      label: Dark Footer Background
+      type: boolean
+    operations:
+      delete: false
+  - name: home-fr
+    label: French Homepage
+    type: file
+    path: src/content/homepage/french/-index.md
+    format: yaml-frontmatter
+    fields: *id001
+    operations:
+      delete: false
+- name: homepage-sections
+  label: Homepage Sections
+  type: group
+  items:
+  - name: english-sections
+    label: English Sections
+    type: group
+    items:
+    - name: en-banner
+      label: Hero Banner
+      type: file
+      path: src/content/sections/english/banner-three.md
+      format: yaml-frontmatter
+      fields:
+      - name: enable
+        type: boolean
+      - name: subtitle
+        type: string
+      - name: title
+        type: text
+      - name: description
+        type: text
+      - name: mapImage
+        label: Map Image
+        type: image
+      - name: gradientBackgroundImage
+        label: Background Image
+        type: image
+      - name: buttons
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{label}'
+        fields:
+        - name: enable
+          type: boolean
+        - name: label
+          type: string
+        - name: url
+          type: string
+        - name: hoverEffect
+          type: string
+        - name: variant
+          type: string
+      operations:
+        delete: false
+    - name: en-about
+      label: About Section
+      type: file
+      path: src/content/sections/english/about-section.md
+      format: yaml-frontmatter
+      fields:
+      - name: enable
+        type: boolean
+      - name: imagePosition
+        type: select
+        options:
+          values:
+          - left
+          - right
+      - name: images
+        type: object
+        fields:
+        - name: large
+          label: Large Image
+          type: image
+        - name: small
+          label: Small Image
+          type: image
+      - name: title
+        type: text
+      - name: subtitle
+        type: text
+      - name: description
+        type: text
+      - name: extraType
+        type: select
+        options:
+          values:
+          - skills
+          - list-x
+          - list-y
+          - list-inline
+          - stats
+          - none
+      - name: buttons
+        component: button
+        list: true
+      - name: skills
+        type: object
+        list: true
+        fields:
+        - name: label
+          type: string
+        - name: value
+          type: string
+      - name: listItems
+        type: object
+        list: true
+        fields:
+        - name: title
+          type: string
+        - name: description
+          type: text
+        - name: icon
+          type: string
+      - name: stats
+        type: object
+        list: true
+        fields:
+        - name: value
+          type: string
+        - name: prependValue
+          type: string
+        - name: appendValue
+          type: string
+        - name: label
+          type: string
+      operations:
+        delete: false
+    - name: en-services-section
+      label: Services Section Settings
+      type: file
+      path: src/content/sections/english/services-section.md
+      format: yaml-frontmatter
+      fields:
+      - name: enable
+        type: boolean
+      - name: title
+        type: text
+      - name: button
+        component: button
+      - name: options
+        type: object
+        fields:
+        - name: layout
+          type: select
+          options:
+            values:
+            - grid
+            - carousel
+            - accordion
+        - name: appearance
+          type: string
+        - name: iconPlacement
+          type: select
+          options:
+            values:
+            - top
+            - right
+        - name: column
+          type: number
+        - name: sectionVerticalSpace
+          type: boolean
+        - name: marquee
+          type: object
+          fields:
+          - name: elementWidth
+            type: string
+          - name: elementWidthAuto
+            type: boolean
+          - name: elementWidthResponsive
+            type: string
+          - name: pauseOnHover
+            type: boolean
+          - name: reverse
+            type: string
+          - name: duration
+            type: string
+          - name: fullWidth
+            type: boolean
+      operations:
+        delete: false
+    - name: en-blog-section
+      label: Blog Section
+      type: file
+      path: src/content/sections/english/blog-section.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: en-call-to-action-widget
+      label: Call to Action Widget
+      type: file
+      path: src/content/sections/english/call-to-action-widget.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: en-call-to-action
+      label: Call to Action
+      type: file
+      path: src/content/sections/english/call-to-action.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: en-contact-section-two
+      label: Contact Section Two
+      type: file
+      path: src/content/sections/english/contact-section-two.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: en-contact-section
+      label: Contact Section
+      type: file
+      path: src/content/sections/english/contact-section.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: en-startup-skill-section
+      label: Startup Skill Section
+      type: file
+      path: src/content/sections/english/startup-skill-section.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: en-team-section
+      label: Team Section
+      type: file
+      path: src/content/sections/english/team-section.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: en-testimonial
+      label: Testimonials
+      type: file
+      path: src/content/sections/english/testimonial.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: en-working-process
+      label: Working Process
+      type: file
+      path: src/content/sections/english/working-process.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+  - name: french-sections
+    label: French Sections
+    type: group
+    items:
+    - name: fr-banner
+      label: Hero Banner
+      type: file
+      path: src/content/sections/french/banner-three.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: fr-about
+      label: About Section
+      type: file
+      path: src/content/sections/french/about-section.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: fr-services-section
+      label: Services Section Settings
+      type: file
+      path: src/content/sections/french/services-section.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: fr-blog-section
+      label: Blog Section
+      type: file
+      path: src/content/sections/french/blog-section.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: fr-call-to-action-widget
+      label: Call to Action Widget
+      type: file
+      path: src/content/sections/french/call-to-action-widget.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: fr-call-to-action
+      label: Call to Action
+      type: file
+      path: src/content/sections/french/call-to-action.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: fr-contact-section-two
+      label: Contact Section Two
+      type: file
+      path: src/content/sections/french/contact-section-two.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: fr-contact-section
+      label: Contact Section
+      type: file
+      path: src/content/sections/french/contact-section.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: fr-startup-skill-section
+      label: Startup Skill Section
+      type: file
+      path: src/content/sections/french/startup-skill-section.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: fr-team-section
+      label: Team Section
+      type: file
+      path: src/content/sections/french/team-section.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: fr-testimonial
+      label: Testimonials
+      type: file
+      path: src/content/sections/french/testimonial.md
+      format: code
+      options:
+        language: yaml
+      operations:
+        delete: false
+    - name: fr-working-process
+      label: Working Process
+      type: file
+      path: src/content/sections/french/working-process.md
       format: code
       options:
         language: yaml
