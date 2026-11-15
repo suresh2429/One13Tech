@@ -1,17 +1,25 @@
 ---
 enable: true
-title: "Let’s build an awesome project together"
-description: "Share your goals with our team and we will help define the right strategy, scope, and delivery plan for your next technology project."
-officeHours: "Office Hours: Mon - Sat: 8:00 AM - 10:00 PM"
+
+title: "Let's Build Something Great Together"
+
+description: |
+  Looking for reliable database and IT solutions? Connect with One13Tech. Share your technology requirements with us, and our team will help you find the right solution for your business.
+  
+officeHours: "Office Hours: Monday - Saturday"
 
 info:
-  - title: "Address"
+  - title: "Office Address"
     icon: "MapPin"
-    description: "1800 Market Street, Suite 420 <br /> San Francisco, CA 94103"
-  - title: "Contact"
-    icon: "Mail"
-    description: "hello@example.com <br /> +1 415 555 2300"
+    description: |
+      #314, Vestaa Lushes,
+      Gopasandra, Muthanallur,
+      Bangalore, Karnataka, India - 560099
 
-# Form title, description, fields, button, and submission messages are shared
-# from `contact-section.md`. Add `form:` here only for section-specific overrides.
----
+  - title: "Phone"
+    icon: "Phone"
+    description: "+91 99622 82429"
+
+  - title: "Email"
+    icon: "Mail"
+    description: "itservices@one13tech.com"
