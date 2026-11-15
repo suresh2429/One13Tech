@@ -1,19 +1,22 @@
 ---
 enable: true
-title: "We provide best tech solutions for your business"
-description: "We are architects of innovation, trailblazers of technological advancement, and partners in your success. As a dynamic and forward-thinking organization"
-mapImage: "/images/banner/map.svg"
-gradientBackgroundImage: "/images/banner/home-three-gradient-bg.svg"
-
+title: Connect. Secure. Scale. Your Business with One13Tech.
+description: One13Tech delivers reliable technology and database solutions that
+  help businesses build, modernize and manage their IT infrastructure. From
+  database administration and migration to performance optimization, security
+  and managed services, we help keep your business technology running smoothly.
+mapImage: /images/banner/map.svg
+gradientBackgroundImage: /images/banner/home-three-gradient-bg.svg
 buttons:
   - enable: true
-    label: "Work With Us"
-    url: "/#contact"
-    hoverEffect: "magnetic-text-flip"
-    variant: "fill"
+    label: Work With Us
+    url: /#contact
+    hoverEffect: magnetic-text-flip
+    variant: fill
   - enable: true
-    label: "View Services"
-    url: "/services/"
-    hoverEffect: "magnetic-text-flip"
-    variant: "fill-white"
+    label: Explore Our Services
+    url: /services/
+    hoverEffect: magnetic-text-flip
+    variant: fill-white
+subtitle: Technology Solutions for Modern Businesses
 ---
